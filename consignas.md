@@ -112,7 +112,7 @@ Va a fallar en varios lugares antes de andar. Eso es esperable y es la parte que
 
 ## Entregas y trabajo en equipo
 
-- **Material para clonar:** [`Universidad-Nacional-de-Rafaela/ingenieria-computacion-2`](https://github.com/Universidad-Nacional-de-Rafaela/ingenieria-computacion-2) — consignas y ejercicios (se va sumando clase a clase).
+- **Material para clonar:** [`Universidad-Nacional-de-Rafaela/IC-ingenieria-computacion-2`](https://github.com/Universidad-Nacional-de-Rafaela/IC-ingenieria-computacion-2) — consignas y ejercicios (se va sumando clase a clase).
 - Todo vive en el **repo del equipo** en GitHub (uno propio, creado por ustedes — no es el repo de material de arriba). Lo que no está commiteado, no existe.
 - Commits seguido y con mensajes que digan qué hicieron.
 - Cada clase tiene que cerrar con su pieza andando y subida.
