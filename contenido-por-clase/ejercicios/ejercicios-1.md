@@ -19,8 +19,8 @@ Tenés las notas de un alumno: `7, 4, 9, 10, 6`. Calculá e imprimí el promedio
 **Listo cuando:** imprime el promedio correcto y el cartel de aprobado/desaprobado.
 
 ### 🟢 A2 — El tipo importa
-Creá una variable `cantidad = "5"` (con comillas) y otra `precio = 100`. Intentá hacer `cantidad * precio` y mirá qué pasa. Después arreglalo para que dé `500`.
-**Listo cuando:** entendés *por qué* fallaba antes y por qué anda ahora. (Pista: `type(cantidad)`.)
+Creá una variable `cantidad = "5"` (con comillas) y otra `precio = 100`. Hacé `cantidad * precio` e imprimí el resultado — **no da un error**, pero tampoco da lo que uno esperaría de una multiplicación. Después arreglalo para que dé `500`.
+**Listo cuando:** entendés *por qué* `"5" * 100` no explota pero tampoco multiplica, y por qué la versión arreglada sí da `500`. (Pista: `type(cantidad)`.)
 
 ### 🟢 A3 — Conversión de temperatura
 Pedí (o fijá) una temperatura en Celsius e imprimí su equivalente en Fahrenheit (`F = C * 9/5 + 32`).
@@ -72,7 +72,7 @@ Dada la playlist de B1, imprimila **en orden inverso** sin escribir un `for` que
 
 ### 🟡 B7 — Sin repetidos
 Dada la lista `[3, 5, 3, 8, 5, 1, 8, 8]`, obtené una lista de los valores **sin repetir**. Investigá `set()`.
-**Listo cuando:** no quedan duplicados (el orden no importa).
+**Listo cuando:** no quedan duplicados. El orden no importa y **no tiene por qué coincidir con el de tu compañero** — `set()` no garantiza ningún orden particular, eso es normal.
 
 ### 🔴 B8 — Promedio móvil
 Dada una lista de 10 lecturas cualquiera, calculá el **promedio de a 3 elementos consecutivos** (posiciones 0-1-2, después 1-2-3, después 2-3-4…). Esto se llama ventana deslizante.
@@ -99,12 +99,12 @@ Armá una lista de **3 películas** (cada una un diccionario como C1). Recorrela
 **Listo cuando:** imprime los 3 títulos. (Esto es *exactamente* la forma en que la API te va a devolver datos en la clase 2.)
 
 ### 🔴 C5 — Búsqueda
-Sobre la lista de C4, escribí código que imprima la película de un director dado (ej. todas las de "Nolan"). Si no hay ninguna, que avise.
-**Listo cuando:** encuentra las que matchean y maneja el caso "ninguna".
+Sobre la lista de C4, escribí código que imprima las películas de un director dado. Si en C4 guardaste el nombre completo (ej. `"Christopher Nolan"`), buscar por el nombre completo exacto (`==`) no va a encontrar nada si buscás solo `"Nolan"` — son strings distintos. Elegí una de las dos y probá que ande: (a) comparación exacta con el nombre completo, o (b) `"Nolan" in pelicula["director"]` para que matchee por coincidencia parcial. Si no hay ninguna, que avise.
+**Listo cuando:** encuentra las que matchean con el criterio que elegiste y maneja el caso "ninguna".
 
 ### 🟢 C6 — Combinar fichas
 Tenés dos diccionarios de la misma película con datos distintos, ej. `{"titulo": "Dune", "anio": 2021}` y `{"puntaje": 8, "anio": 2024}`. Combinalos en uno solo. ¿Qué pasa con `anio`, que está en los dos? Investigá `.update()` o el operador `|`.
-**Listo cuando:** entendés qué valor "gana" cuando una clave se repite.
+**Listo cuando:** entendés qué valor "gana" cuando una clave se repite — y que depende del **orden** en que combines los diccionarios (`dict1 | dict2` no da lo mismo que `dict2 | dict1`; con `.update()` pasa lo mismo según a cuál le hacés `.update()` de cuál). No hay una única respuesta "correcta" de qué año queda, lo importante es que sepas explicar por qué quedó ese.
 
 ### 🟡 C7 — Contador de palabras
 Dada una frase cualquiera, armá un diccionario que cuente cuántas veces aparece cada palabra.
@@ -161,8 +161,8 @@ Imprimí: cuántas películas hay, el puntaje promedio, y el título de la mejor
 **Listo cuando:** los tres datos salen correctos del archivo real.
 
 ### 🟡 E4 — Filtrar y guardar
-Agregá una columna `genero` a tu CSV (a mano). Leé el archivo, quedate solo con las películas de un género elegido, y escribí un **nuevo CSV** (`filtradas.csv`) solo con esas.
-**Listo cuando:** el nuevo CSV existe, tiene menos filas que el original, y lo pueden abrir y verificar a ojo.
+Agregale una columna `genero` **al mismo** `peliculas.csv` que ya venís usando desde E1 (no crees un archivo nuevo con otro nombre — si lo hacés, terminás con dos versiones del dataset y los resultados de E1-E3 y E4-E5 dejan de coincidir). Editalo a mano. Leé el archivo, quedate solo con las películas de un género elegido, y escribí un **nuevo CSV** (`filtradas.csv`) solo con esas.
+**Listo cuando:** el nuevo CSV existe, tiene menos filas que el original (que ahora incluye la columna `genero`), y lo pueden abrir y verificar a ojo.
 
 ### 🔴 E5 — Agrupar por categoría
 Usando el CSV con `genero` de E4, calculá el **puntaje promedio por género** (un diccionario `{genero: promedio}`).
@@ -219,8 +219,8 @@ Escribí un archivo `test_promedio.py` que importe tu función `promedio()` (de 
 **Listo cuando:** `pytest` corre y muestra `1 passed`.
 
 ### 🟢 G2 — Un test que falla a propósito
-Escribí un test con un `assert` que sepas de antemano que va a fallar (comparalo contra un valor incorrecto). Corré `pytest` y leé el output en rojo.
-**Listo cuando:** entendés qué información te da pytest cuando un test falla — no solo "falló", sino con qué valor esperaba y cuál obtuvo.
+Escribí un test con un `assert` que sepas de antemano que va a fallar (comparalo contra un valor incorrecto). Corré `pytest` y leé el output en rojo. **Una vez que lo entendiste, comentá o borrá ese test** — no tiene que quedar fallando en la versión final que subís, o cada corrida de `pytest` de ahí en adelante (incluso en G3-G8) va a mostrar un fallo que no es un bug real.
+**Listo cuando:** entendés qué información te da pytest cuando un test falla — no solo "falló", sino con qué valor esperaba y cuál obtuvo — y tu repo final queda con todos los tests en verde.
 
 ### 🟡 G3 — Varios casos, varios tests
 Escribí al menos 3 tests para `aprobo()` (D2): un caso que aprueba, uno que no aprueba, y uno "al límite" (promedio exactamente 6).
