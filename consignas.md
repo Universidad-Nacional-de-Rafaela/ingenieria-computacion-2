@@ -110,10 +110,21 @@ Va a fallar en varios lugares antes de andar. Eso es esperable y es la parte que
 
 ---
 
-## Entregas y trabajo en equipo
+## Entrega de los ejercicios (repo individual)
+
+Los ejercicios de cada clase (`ejercicios/ejercicios-N.md`) **no** se entregan en el repo del equipo: van en un repo de GitHub **propio de cada alumno**, separado del repo del capstone.
+
+- **Nombre del repo:** `IC-IC2-apellido-fecha_de_la_practica`, con la fecha en formato `AAAA-MM-DD` (la fecha de la clase en la que se hace la práctica). Ejemplo: `IC-IC2-perez-2026-08-03`.
+- **Un Pull Request por cada Parte** de `ejercicios-N.md` (un PR para la Parte A, otro para la Parte B, y así). Nada de un PR gigante con todo junto, ni uno por cada ejercicio suelto.
+- Cada PR se **mergea a `main` desde GitHub** (botón *Merge*), no por consola.
+- **Un commit directo a `main`, sin pasar por un PR, no se considera entregado.** Si el docente corrige y ve que algo llegó a `main` sin su PR correspondiente, es como si no existiera.
+
+Esto es intencional: es la primera práctica real del flujo rama → Pull Request → merge, que es como se trabaja en cualquier equipo de verdad (y es distinto del flujo de push directo que usan en el repo del equipo para el capstone).
+
+## Entregas y trabajo en equipo (el capstone)
 
 - **Material para clonar:** [`Universidad-Nacional-de-Rafaela/IC-ingenieria-computacion-2`](https://github.com/Universidad-Nacional-de-Rafaela/IC-ingenieria-computacion-2) — consignas y ejercicios (se va sumando clase a clase).
-- Todo vive en el **repo del equipo** en GitHub (uno propio, creado por ustedes — no es el repo de material de arriba). Lo que no está commiteado, no existe.
+- Todo vive en el **repo del equipo** en GitHub (uno propio, creado por ustedes — no es el repo de material de arriba, ni el repo individual de ejercicios). Lo que no está commiteado, no existe.
 - Commits seguido y con mensajes que digan qué hicieron.
 - Cada clase tiene que cerrar con su pieza andando y subida.
 - El README del repo tiene que explicar cómo levantar el sistema. Si otro no puede levantarlo siguiendo el README, no está terminado.

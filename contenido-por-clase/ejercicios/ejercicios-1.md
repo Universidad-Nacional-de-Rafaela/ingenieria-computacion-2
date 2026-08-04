@@ -7,6 +7,8 @@
 > Regla de oro: si resolvés algo pegando un comando que no entendés, no cuenta. Entendé *por qué* funciona.
 >
 > **Hay ejercicios de sobra a propósito.** Si tu grupo va rápido, seguí bajando por la lista — no hace falta avisar al profe para que les invente algo más. Lo único obligatorio es el checkpoint de cierre que les marquen los docentes; todo lo demás es para no parar nunca de practicar.
+>
+> **Cómo se entrega:** estos ejercicios van en tu **repo individual** `IC-IC2-apellido-fecha_de_la_practica` (no en el repo del equipo). **Un Pull Request por cada Parte** (A, B, C…), mergeado a `main` desde GitHub. Un commit directo a `main` sin PR no cuenta como entregado. Ver el detalle en [`../../consignas.md`](../../consignas.md).
 
 ---
 

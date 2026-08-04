@@ -44,6 +44,17 @@ El ciclo básico que van a repetir mil veces:
 5. `push` — suben sus fotos a GitHub.
 6. `pull` — bajan las fotos que subieron los compañeros.
 
+En el **repo del equipo** (el del capstone), hoy y en las próximas clases van a hacer `push` directo a `main` — sin vueltas, porque son pocos y se conocen.
+
+Pero para **entregar los ejercicios** de esta clase van a usar un flujo distinto, un escalón más: en vez de `push` directo a `main`, suben su trabajo a una **rama** y abren un **Pull Request (PR)** — un pedido de "che, mergeen esto a `main`" que se revisa antes de aceptarse. El ciclo se estira así:
+
+1. `clone` → editan → `add` → `commit` (igual que antes).
+2. En vez de pushear a `main`: crean una **rama** (`git checkout -b nombre-de-la-parte`) y pushean esa rama.
+3. Desde GitHub, abren un **Pull Request**: "quiero mergear esta rama a `main`".
+4. Se mergea desde GitHub (botón *Merge*) — recién ahí el cambio llega a `main`.
+
+Es el mismo flujo de cualquier equipo de software real: nadie le pega directo a `main`, todo pasa por una revisión, aunque sea de un segundo. El detalle de cómo entregar cada Parte de los ejercicios está en [`../consignas.md`](../consignas.md).
+
 ### Concepto 4 — El primer merge conflict (no es un error, es un rito)
 
 Cuando dos personas editan **la misma línea** del mismo archivo, Git no sabe cuál versión gana, así que **les pregunta a ustedes**. Eso es un *merge conflict*. Da miedo la primera vez porque aparece un texto raro con `<<<<<<<`, `=======` y `>>>>>>>` en el archivo. No está roto: Git les está mostrando las dos versiones para que elijan. Resolverlo es: borrar las marcas, dejar la versión correcta, y commitear. **Que les pase hoy con algo trivial es lo mejor que les puede pasar** — mucho mejor que en la clase 4 con el sistema entero.
@@ -71,6 +82,8 @@ No es una clase de testing a fondo — es la semilla. Lo que importa hoy es la i
 | **`requirements.txt`** | La lista de librerías (con versión) que necesita el proyecto. |
 | **commit** | Una foto del proyecto en un momento, con mensaje. |
 | **push / pull** | Subir / bajar commits a GitHub. |
+| **rama (branch)** | Una línea de trabajo separada de `main`, para no tocarla directo. |
+| **Pull Request (PR)** | Un pedido de mergear una rama a `main`, revisable antes de aceptarse. |
 | **merge conflict** | Git no puede decidir entre dos cambios sobre la misma línea y les pide que elijan. |
 | **`.gitignore`** | Lista de cosas que Git NO debe guardar (el `venv`, archivos basura). |
 | **`pytest`** | Herramienta que corre tests automáticos: funciones `test_*` con `assert` adentro. |
